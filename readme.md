@@ -5,6 +5,8 @@
 | [Summary](#summary)     |
 | [Lab #1 Summary](#lab-1-summary) |
 | [Lab #2 Summary](#lab-2-summary) |
+| [Lab #3 Summary](#lab-3-summary) |
+
 
 ## **Summary**
 

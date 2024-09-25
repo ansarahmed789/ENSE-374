@@ -1,5 +1,17 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
 h1 {
     text-align: center;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 button {
@@ -19,11 +31,16 @@ input {
     width: 120px;
 }
 
-.Homepage .login {
-    max-width: 300px;
+.LoggedInLogOut {
+    max-width: 500px;
+    
 } 
 
-.note {
+.Login {
+    max-width: 500px;
+} 
+
+.Note {
     margin: 9px 0;
     width: 50%;
 
@@ -31,16 +48,4 @@ input {
 
 .input {
     max-width: 500px;
-}
-
-* {
-    font-family: 'Poppins', sans-serif;
-    font-weight: normal;
-    font-style: normal;
-}
-
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
