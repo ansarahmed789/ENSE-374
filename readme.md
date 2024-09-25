@@ -28,3 +28,7 @@ This lab introduces some of the tools used in this course, including a modern co
 ## **Lab-2 Summary**
 
 The purpose of this lab is to briefly introduce the View component of the MVC, and particularly to introduce the Hyper-Text Markup Language (HTML). In this tutorial we will explore the building blocks of the front end of the web by discussing the different elements that make up the View, what they do and how they interact. We will then focus especially on HTML, the core building block of all websites.
+
+## **Lab-3 Summary**
+
+In this lab we will look at the Bootstrap CSS library, a library made by twitter, which modernizes our pages by extends our custom CSS to provide pre made layout, styles and components.
