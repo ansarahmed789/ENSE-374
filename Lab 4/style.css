@@ -1,0 +1,12 @@
+body {
+    background-color: #f7f7f7;
+}
+
+.note-card {
+    margin: 10px;
+    border-radius: 8px;
+}
+
+#notes-container {
+    margin-top: 20px;
+}

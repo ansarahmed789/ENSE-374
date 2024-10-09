@@ -6,6 +6,7 @@
 | [Lab #1 Summary](#lab-1-summary) |
 | [Lab #2 Summary](#lab-2-summary) |
 | [Lab #3 Summary](#lab-3-summary) |
+| [Lab #4 Summary](#lab-4-summary) |
 
 
 ## **Summary**
@@ -34,3 +35,7 @@ The purpose of this lab is to briefly introduce the View component of the MVC, a
 ## **Lab-3 Summary**
 
 In this lab we will look at the Bootstrap CSS library, a library made by twitter, which modernizes our pages by extends our custom CSS to provide pre made layout, styles and components.
+
+## **Lab-4 Summary**
+
+This lab introduces JavaScript (JS) which is a programming language which runs in the Web Browser. In addition to being able to perform typical programming language tasks, like data storage and computation, it can additionally interact with the HTML and CSS on a web page through the Document Object Model (DOM), allowing real time interactions with the page performed on the client side. We’ll look at a small subset of the capabilities of JavaScript in this lab.

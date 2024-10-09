@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "creator": "User 1",
+        "text": "This is the first sticky note!",
+        "upvotes": ["alice", "bob"],
+        "downvotes": ["charlie"],
+        "createdAt": "2024-10-09",
+        "lastModified": "2024-10-09"
+    },
+    {
+        "id": 2,
+        "creator": "alice_smith",
+        "text": "Here’s a second note with more content!",
+        "upvotes": ["john_doe"],
+        "downvotes": [],
+        "createdAt": "2024-10-08",
+        "lastModified": "2024-10-08"
+    },
+    {
+        "id": 3,
+        "creator": "charlie_brown",
+        "text": "Final note for testing purposes.",
+        "upvotes": ["alice", "john_doe", "bob"],
+        "downvotes": [],
+        "createdAt": "2024-10-07",
+        "lastModified": "2024-10-09"
+    }
+]
