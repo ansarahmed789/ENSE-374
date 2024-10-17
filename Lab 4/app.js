@@ -1,16 +1,18 @@
 let notesModel = []; // Array to store the notes
+let noteIdCounter = 0; // Counter to generate unique ID for each note
 
 const noteColors = ['#ff7eb9', '#ff65a3', '#7afcff', '#feff9c', '#fff740']; // Array of preset colors to assign to each note
 
 // Function to add a new note to the notesModel array
 function addNote(title, contents) {
     const newNote = {
-        title: title,    
+        id: noteIdCounter++,
+        title: title,
         contents: contents,
         color: noteColors[notesModel.length % noteColors.length] //
     };
-    notesModel.push(newNote); // Add the new note to the notesModel array
-    updateView(); // Update the view to display the newly added note
+    notesModel.push(newNote);
+    updateView(); 
 }
 
 // Function to update the DOM and display all notes
@@ -45,14 +47,13 @@ document.getElementById('note-form').addEventListener('submit', function (event)
     let noteContents = document.getElementById('note-contents').value;
 
     //  Add the new note and clearing the title and contents section 
-        addNote(noteTitle, noteContents);
-        document.getElementById('note-title').value = ''; 
-        document.getElementById('note-contents').value = ''; 
-    }
-);
+    addNote(noteTitle, noteContents);
+    document.getElementById('note-title').value = ''; 
+    document.getElementById('note-contents').value = ''; 
+});
 
 // Function to remove a note based on its ID
 function burn(noteId) {
     notesModel = notesModel.filter(note => note.id !== noteId); 
     updateView();
-};
+}
