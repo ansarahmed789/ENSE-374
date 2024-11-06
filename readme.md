@@ -7,7 +7,8 @@
 | [Lab #2 Summary](#lab-2-summary) |
 | [Lab #3 Summary](#lab-3-summary) |
 | [Lab #4 Summary](#lab-4-summary) |
-
+| [Lab #5 Summary](#lab-5-summary) |
+| [Lab #6 Summary](#lab-6-summary) |
 
 ## **Summary**
 
@@ -39,3 +40,9 @@ In this lab we will look at the Bootstrap CSS library, a library made by twitter
 ## **Lab-4 Summary**
 
 This lab introduces JavaScript (JS) which is a programming language which runs in the Web Browser. In addition to being able to perform typical programming language tasks, like data storage and computation, it can additionally interact with the HTML and CSS on a web page through the Document Object Model (DOM), allowing real time interactions with the page performed on the client side. We’ll look at a small subset of the capabilities of JavaScript in this lab.
+
+## **Lab-5 Summary**
+This lab introduces jQuery, a JavaScript library which makes writing JavaScript code, particularly involving DOM operations, much faster. In particular it handles things like DOM traversal and manipulation, event handling and animations. Additionally, jQuery acts as an introduction to JavaScript libraries, of which many exist, so that you can understand the process of finding, integrating and using a JavaScript library.
+
+## **Lab-6 Summary**
+This lab introduces Node.js, a server-side runtime environment that uses JavaScript. This application allows you to write code in JavaScript that exists on the server and can perform actions like serving files, performing database operations and customizing files at runtime through templates.
