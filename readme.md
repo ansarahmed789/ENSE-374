@@ -46,3 +46,6 @@ This lab introduces jQuery, a JavaScript library which makes writing JavaScript 
 
 ## **Lab-6 Summary**
 This lab introduces Node.js, a server-side runtime environment that uses JavaScript. This application allows you to write code in JavaScript that exists on the server and can perform actions like serving files, performing database operations and customizing files at runtime through templates.
+
+## **Lab-7 Summary**
+This lab introduces EJS, a Node.js library for Embedded JavaScript Templates. With this, we will be able to create Templated HTML files which will contain placeholders for different variables. These variables will be automatically filled from the Express Server using Node.js. Additionally, we can create reusable chunks of files, called Partials, that can be dynamically inserted into pages.
