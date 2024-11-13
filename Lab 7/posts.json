@@ -1,0 +1,81 @@
+[
+  {
+    "_id": 1,
+    "text": "First note from User X",
+    "creator": "x@x.x",
+    "upvotes": [],
+    "downvotes": []
+  },
+  {
+    "_id": 2,
+    "text": "User X's second note with one upvote from User Z",
+    "creator": "x@x.x",
+    "upvotes": [
+      "z@z.z"
+    ],
+    "downvotes": []
+  },
+  {
+    "_id": 3,
+    "text": "User X's third note with several upvotes and a downvote",
+    "creator": "x@x.x",
+    "upvotes": [
+      "y@y.y",
+      "z@z.z"
+    ],
+    "downvotes": [
+      "w@w.w"
+    ]
+  },
+  {
+    "_id": 4,
+    "text": "User Y's introductory note with no votes",
+    "creator": "y@y.y",
+    "upvotes": [],
+    "downvotes": []
+  },
+  {
+    "_id": 5,
+    "text": "User Y's second note with an upvote from User X",
+    "creator": "y@y.y",
+    "upvotes": [
+      "x@x.x"
+    ],
+    "downvotes": []
+  },
+  {
+    "_id": 6,
+    "text": "User Z's note with two downvotes",
+    "creator": "z@z.z",
+    "upvotes": [],
+    "downvotes": [
+      "x@x.x",
+      "y@y.y"
+    ]
+  },
+  {
+    "_id": 7,
+    "text": "User W's note with one upvote and one downvote",
+    "creator": "w@w.w",
+    "upvotes": [
+      "x@x.x"
+    ],
+    "downvotes": [
+      "z@z.z"
+    ]
+  },
+  {
+    "_id": 8,
+    "text": "Another note by User Y with no interactions",
+    "creator": "y@y.y",
+    "upvotes": [],
+    "downvotes": []
+  },
+  {
+    "_id": 9,
+    "text": "User B added a note",
+    "creator": "a@a.a",
+    "upvotes": [],
+    "downvotes": []
+  }
+]
