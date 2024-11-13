@@ -1,0 +1,87 @@
+<% posts.reverse().forEach(post => { %>
+    <div class="input-group mb-3" data-post-id="<%= post._id %>">
+        <input type="text" class="form-control" placeholder="<%= post.text %>" disabled aria-label="Note">
+
+        <!-- Own Post Logic -->
+        <% if (post.creator === user) { %>
+            <% if (post.upvotes.length === 0 && post.downvotes.length === 0) { %>
+                <!-- User's own post with no votes -->
+                <span class="input-group-text">0</span>
+            <% } else { %>
+                <!-- User's own post with votes -->
+                <span class="input-group-text"><%= post.upvotes.length - post.downvotes.length %></span>
+            <% } %>
+        <% } else { %>
+            <!-- Other User's Post Logic -->
+            <!-- No Interaction -->
+            <% if (post.voteByUser === 'none') { %>
+                <!-- Upvote Button -->
+                <form action="/upvote" method="post">
+                    <input type="hidden" name="user_email" value="<%= user %>">
+                    <input type="hidden" name="post_id" value="<%= post._id %>">
+                    <button type="submit" class="btn btn-outline-success">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-square" viewBox="0 0 16 16">
+                            <path d="M8 1a.5.5 0 0 1 .5.5v14.5a.5.5 0 0 1-1 0V1.5a.5.5 0 0 1 .5-.5z"/>
+                        </svg>
+                    </button>
+                </form>
+                <!-- Downvote Button -->
+                <form action="/downvote" method="post">
+                    <input type="hidden" name="user_email" value="<%= user %>">
+                    <input type="hidden" name="post_id" value="<%= post._id %>">
+                    <button type="submit" class="btn btn-outline-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-square" viewBox="0 0 16 16">
+                            <path d="M8 15a.5.5 0 0 1-.5-.5V1.5a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5z"/>
+                        </svg>
+                    </button>
+                </form>
+            <!-- Upvoted Post -->
+            <% } else if (post.voteByUser === 'upvote') { %>
+                <!-- Remove Upvote Button -->
+                <form action="/remove-upvote" method="post">
+                    <input type="hidden" name="user_email" value="<%= user %>">
+                    <input type="hidden" name="post_id" value="<%= post._id %>">
+                    <button type="submit" class="btn btn-success">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-square" viewBox="0 0 16 16">
+                            <path d="M8 1a.5.5 0 0 1 .5.5v14.5a.5.5 0 0 1-1 0V1.5a.5.5 0 0 1 .5-.5z"/>
+                        </svg>
+                    </button>
+                </form>
+                <!-- Change Upvote to Downvote -->
+                <form action="/remove-upvote-and-downvote" method="post">
+                    <input type="hidden" name="user_email" value="<%= user %>">
+                    <input type="hidden" name="post_id" value="<%= post._id %>">
+                    <button type="submit" class="btn btn-outline-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-square" viewBox="0 0 16 16">
+                            <path d="M8 15a.5.5 0 0 1-.5-.5V1.5a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5z"/>
+                        </svg>
+                    </button>
+                </form>
+            <!-- Downvoted Post -->
+            <% } else if (post.voteByUser === 'downvote') { %>
+                <!-- Change Downvote to Upvote -->
+                <form action="/remove-downvote-and-upvote" method="post">
+                    <input type="hidden" name="user_email" value="<%= user %>">
+                    <input type="hidden" name="post_id" value="<%= post._id %>">
+                    <button type="submit" class="btn btn-outline-success">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-square" viewBox="0 0 16 16">
+                            <path d="M8 1a.5.5 0 0 1 .5.5v14.5a.5.5 0 0 1-1 0V1.5a.5.5 0 0 1 .5-.5z"/>
+                        </svg>
+                    </button>
+                </form>
+                <!-- Remove Downvote -->
+                <form action="/remove-downvote" method="post">
+                    <input type="hidden" name="user_email" value="<%= user %>">
+                    <input type="hidden" name="post_id" value="<%= post._id %>">
+                    <button type="submit" class="btn btn-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-square" viewBox="0 0 16 16">
+                            <path d="M8 15a.5.5 0 0 1-.5-.5V1.5a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5z"/>
+                        </svg>
+                    </button>
+                </form>
+            <% } %>
+            <!-- Display Vote Count -->
+            <span class="input-group-text"><%= post.upvotes.length - post.downvotes.length %></span>
+        <% } %>
+    </div>
+<% }); %>
