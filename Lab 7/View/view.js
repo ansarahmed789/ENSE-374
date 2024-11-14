@@ -1,5 +1,5 @@
 export function displayNotes(notes, currentUser) {
-    const noteContainer = $("#notes-container");
+    const noteContainer = $(".accordion");
     noteContainer.empty(); // Clear container for fresh rendering
 
     // Loop through each note to extract relevant details

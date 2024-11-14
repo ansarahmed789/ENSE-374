@@ -1,11 +1,11 @@
 // An empty array to hold all notes as objects
 export let notesList = [];
 
-// createNote adds a new note to the list with given author and content
-export function createNote(author, content) {
+// createNote adds a new note to the list with given creator and content
+export function createNote(creator, content) {
   const noteEntry = {
     id: notesList.length + 1, // Creates a simple ID based on the current length of the list
-    author: author,           
+    creator: creator,           
     content: content,        
     upvotes: [],              
     downvotes: []             
