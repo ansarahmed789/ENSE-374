@@ -50,7 +50,8 @@
     "upvotes": [],
     "downvotes": [
       "x@x.x",
-      "y@y.y"
+      "y@y.y",
+      ""
     ]
   },
   {
@@ -58,7 +59,8 @@
     "text": "User W's note with one upvote and one downvote",
     "creator": "w@w.w",
     "upvotes": [
-      "x@x.x"
+      "x@x.x",
+      ""
     ],
     "downvotes": [
       "z@z.z"
@@ -68,7 +70,9 @@
     "_id": 8,
     "text": "Another note by User Y with no interactions",
     "creator": "y@y.y",
-    "upvotes": [],
+    "upvotes": [
+      ""
+    ],
     "downvotes": []
   },
   {
