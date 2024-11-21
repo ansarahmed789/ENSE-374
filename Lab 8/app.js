@@ -46,7 +46,7 @@ app.get("/", (req, res) => res.sendFile(__dirname + "/login.html"));
 
 // Handle login and display notes
 app.post("/note-vote", (req, res) => {
-    const reqUsername = req.body["username"];
+    const useremail = req.body["username"];
     const reqPassword = req.body["password"];
 
     fs.readFile(__dirname + "/users.json", "utf8", (err, jsonString) => {
@@ -54,14 +54,14 @@ app.post("/note-vote", (req, res) => {
 
         try {
             const users = JSON.parse(jsonString);
-            const userExists = users.find(user => user.username === reqUsername && user.password === reqPassword);
+            const userExists = users.find(user => user.username === useremail && user.password === reqPassword);
 
             if (userExists) {
                 fs.readFile(__dirname + "/posts.json", "utf8", (err, postsJson) => {
                     if (err) return res.status(500).send("Server error");
 
                     const notes = JSON.parse(postsJson);
-                    res.render("notevote", { user: { username: reqUsername }, posts: notes });
+                    res.render("notevote", { user: useremail , posts: Post });
                 });
             } else {
                 res.redirect("/");
