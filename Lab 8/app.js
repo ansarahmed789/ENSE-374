@@ -18,7 +18,6 @@ const User = mongoose.model ( "User", userSchema );
 
 
 // create a mongoose schema for a post
-
 const postSchema = new mongoose.Schema({
     text: String,
     creator: String,
@@ -60,8 +59,8 @@ app.post("/note-vote", (req, res) => {
                 fs.readFile(__dirname + "/posts.json", "utf8", (err, postsJson) => {
                     if (err) return res.status(500).send("Server error");
 
-                    const posts = JSON.parse(postsJson);
-                    res.render("notevote", { user: useremail, posts: posts });
+                    const notes = JSON.parse(postsJson);
+                    res.render("notevote", { user: { username: useremail }, posts: posts });
                 });
             } else {
                 res.redirect("/");

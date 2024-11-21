@@ -10,5 +10,13 @@
   {
     "username": "test@123",
     "password": "test"
+  },
+  {
+    "username": "alibaba123",
+    "password": "123alibaba"
+  },
+  {
+    "username": "test123",
+    "password": "123A"
   }
 ]
