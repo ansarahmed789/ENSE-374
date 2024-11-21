@@ -1,0 +1,41 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 25px;
+}
+
+.accordion-item {
+    width: 40%; 
+    align-items: center; 
+    justify-content: center;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.accordion-body{
+    text-align: center;
+}
+
+.Note{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: auto; 
+    width: 50%; 
+    text-align: center;
+    margin-top: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+.input-group.mb-3{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note-Vote</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Welcome, <%= user %>!</h1>
+  <h2>Your Notes:</h2>
+  <ul>
+    <% notes.forEach(note => { %>
+      <li>
+        <p><%= note.content %></p>
+        <button>Upvote (<%= note.upvotes %>)</button>
+        <button>Downvote (<%= note.downvotes %>)</button>
+      </li>
+    <% }) %>
+  </ul>
+
+  <form action="/add-note" method="POST">
+    <input type="text" name="content" placeholder="Enter your note" required>
+    <button type="submit">Add Note</button>
+  </form>
+
+  <form action="/logout" method="GET">
+    <button type="submit">Logout</button>
+  </form>
+</body>
+</html>
