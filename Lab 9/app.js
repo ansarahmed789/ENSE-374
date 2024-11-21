@@ -41,7 +41,7 @@ const Note = mongoose.model("Note", noteSchema);
 // Session Configuration
 app.use(
   session({
-    secret: process.env.SECRET || "yourSecretKey",
+    secret: process.env.SECRET || "myKey",
     resave: false,
     saveUninitialized: false,
   })
@@ -112,7 +112,7 @@ app.get("/note-vote", async (req, res) => {
           upvotes: 0,
           downvotes: 0,
         });
-        await newNote.save(); // Save without callback
+        await newNote.save();
         res.redirect("/note-vote");
       } catch (err) {
         console.error("Error saving note:", err);
