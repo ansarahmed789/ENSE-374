@@ -60,8 +60,8 @@ app.post("/note-vote", (req, res) => {
                 fs.readFile(__dirname + "/posts.json", "utf8", (err, postsJson) => {
                     if (err) return res.status(500).send("Server error");
 
-                    const notes = JSON.parse(postsJson);
-                    res.render("notevote", { user: useremail , posts: Post });
+                    const posts = JSON.parse(postsJson);
+                    res.render("notevote", { user: useremail, posts: posts });
                 });
             } else {
                 res.redirect("/");

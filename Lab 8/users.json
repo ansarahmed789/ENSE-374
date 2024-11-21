@@ -6,5 +6,9 @@
   {
     "username": "c@c.c",
     "password": "cPassword"
+  },
+  {
+    "username": "test@123",
+    "password": "test"
   }
 ]

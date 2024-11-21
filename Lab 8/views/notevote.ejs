@@ -35,7 +35,7 @@
 
     <div class="Note">
         <!-- Render each note based on the user's interaction -->
-        <%- include("partials/notemodule", { posts: posts, user: user.username }) %>
+        <%- include("partials/notemodule.ejs", { posts: posts, user: user.username }) %>
         
         <!-- Section for adding a new post -->
         <div class="input-group mb-3">
