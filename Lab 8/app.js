@@ -60,7 +60,7 @@ app.post("/note-vote", (req, res) => {
                     if (err) return res.status(500).send("Server error");
 
                     const notes = JSON.parse(postsJson);
-                    res.render("notevote", { user: { username: useremail }, posts: posts });
+                    res.render("notevote", { user: { username: useremail }, posts: notes });
                 });
             } else {
                 res.redirect("/");
